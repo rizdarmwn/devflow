@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
 import TagCard from "../cards/TagCard";
 
 const hotQuestions = [
@@ -31,6 +32,7 @@ const RightSidebar = () => {
         <div className="mt-7 flex w-full flex-col gap-[30px]">
           {hotQuestions.map(({ _id, title }) => (
             <Link
+              // TODO: move href to routes constants
               href={`/question/${_id}`}
               className="flex cursor-pointer items-center justify-between gap-7"
             >
