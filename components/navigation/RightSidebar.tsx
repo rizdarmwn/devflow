@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 import TagCard from "../cards/TagCard";
+import ROUTES from "@/constants/routes";
 
 const hotQuestions = [
   { _id: "1", title: "How to create a custom hook in React?" },
@@ -33,7 +34,7 @@ const RightSidebar = () => {
           {hotQuestions.map(({ _id, title }) => (
             <Link
               // TODO: move href to routes constants
-              href={`/question/${_id}`}
+              href={ROUTES.QUESTION(_id)}
               className="flex cursor-pointer items-center justify-between gap-7"
             >
               <p className="body-medium text-dark500_light700">{title}</p>
